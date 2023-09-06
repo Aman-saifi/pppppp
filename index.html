@@ -18,37 +18,28 @@
 </html>
 
 <script>
+var imageQuantities = {
+    "fatiha": 100, // Change this number as per your folder
+    "baqarah": 150, // Change this number as per your folder
+    // Add quantities for other folders here
+};
 
-document.addEventListener("DOMContentLoaded", function () {
-    // Get a reference to the image container
-    var imageContainer = document.getElementById("imageContainer");
+// Function to display images based on button click
+function displayImages(folderName) {
+    // Clear the image container
+    imageContainer.innerHTML = "";
 
-    // Get references to all buttons
-    var fatihaButton = document.getElementById("fatiha");
-    var baqarahButton = document.getElementById("baqarah");
-    // Add references to other buttons here
+    // Get the image quantity for the selected folder
+    var quantity = imageQuantities[folderName];
 
-    // Function to display images based on button click
-    function displayImages(folderName) {
-        // Clear the image container
-        imageContainer.innerHTML = "";
-
-        // Loop through the images in the folder and display them
-        for (var i = 1; i <= 114; i++) {
-            var img = document.createElement("img");
-            img.src = "path/to/repo/" + folderName + "/" + i + ".jpg"; // Update the path as per your repository structure
-            imageContainer.appendChild(img);
-        }
+    // Loop through the images in the folder and display them
+    for (var i = 1; i <= quantity; i++) {
+        var img = document.createElement("img");
+        img.src = "path/to/repo/" + folderName + "/" + i + ".jpg"; // Update the path as per your repository structure
+        imageContainer.appendChild(img);
     }
+}
+Is code me, imageQuantities object me har folder ke liye alag-alag image quantity define ki gayi hai. displayImages function ab folder-specific quantity ka istemal karega aur sirf us quantity tak hi images ko display karega.
 
-    // Add click event listeners to buttons
-    fatihaButton.addEventListener("click", function () {
-        displayImages("fatiha");
-    });
-
-    baqarahButton.addEventListener("click", function () {
-        displayImages("baqarah");
-    });
-    // Add click event listeners for other buttons here
-});
+Aap imageQuantities object me har folder ke liye sahi image quantity set karenge, jisse aapke har folder ke liye sahi number ki images display ho.
 </script>
