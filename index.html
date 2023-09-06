@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Add your CSS and other meta tags here -->
+</head>
+<body>
+    <button id="fatiha">Fatiha</button>
+    <button id="baqarah">Baqarah</button>
+    <!-- Add buttons for other surahs here -->
+
+    <div id="imageContainer">
+        <!-- Images will be displayed here -->
+    </div>
+
+    <!-- Include your JavaScript file -->
+    <script src="your-script.js"></script>
+</body>
+</html>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Get a reference to the image container
+    var imageContainer = document.getElementById("imageContainer");
+
+    // Get references to all buttons
+    var fatihaButton = document.getElementById("fatiha");
+    var baqarahButton = document.getElementById("baqarah");
+    // Add references to other buttons here
+
+    // Function to display images based on button click
+    function displayImages(folderName) {
+        // Clear the image container
+        imageContainer.innerHTML = "";
+
+        // Loop through the images in the folder and display them
+        for (var i = 1; i <= 114; i++) {
+            var img = document.createElement("img");
+            img.src = "path/to/repo/" + folderName + "/" + i + ".jpg"; // Update the path as per your repository structure
+            imageContainer.appendChild(img);
+        }
+    }
+
+    // Add click event listeners to buttons
+    fatihaButton.addEventListener("click", function () {
+        displayImages("fatiha");
+    });
+
+    baqarahButton.addEventListener("click", function () {
+        displayImages("baqarah");
+    });
+    // Add click event listeners for other buttons here
+});
+</script>
