@@ -16,15 +16,11 @@
     <script src="your-script.js"></script>
 </body>
 </html>
+<script>// your-script.js
 
-<script>
-var imageQuantities = {
-    "fatiha": 100, // Change this number as per your folder
-    "baqarah": 150, // Change this number as per your folder
-    // Add quantities for other folders here
-};
+var folderNames = ["fatiha", "baqarah"]; // Add folder names for other surahs here
 
-// Function to display images based on button click
+// Function to display images based on folderName
 function displayImages(folderName) {
     // Clear the image container
     imageContainer.innerHTML = "";
@@ -39,7 +35,12 @@ function displayImages(folderName) {
         imageContainer.appendChild(img);
     }
 }
-Is code me, imageQuantities object me har folder ke liye alag-alag image quantity define ki gayi hai. displayImages function ab folder-specific quantity ka istemal karega aur sirf us quantity tak hi images ko display karega.
 
-Aap imageQuantities object me har folder ke liye sahi image quantity set karenge, jisse aapke har folder ke liye sahi number ki images display ho.
+// Add click event listeners to buttons for each folder
+folderNames.forEach(function (folderName) {
+    var button = document.getElementById(folderName);
+    button.addEventListener("click", function () {
+        displayImages(folderName);
+    });
+});
 </script>
