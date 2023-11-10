@@ -1,51 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">   <!-- Add your CSS and other meta tags here -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aman Saifi</title>
+
+    <!-- Google AdSense Code -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "YOUR_AD_CLIENT_ID",
+            enable_page_level_ads: true
+        });
+    </script>
 </head>
 <body>
-    <button id="fatihaButton">Fatiha</button>
-    <button id="baqarahButton">Baqarah</button>
-    <div id="imageContainer"></div>
+    <div>
+        <h1>Aman Saifi</h1>
+        <p>Welcome to my website!</p>
+    </div>
 
-   <script src="script.js"></script>
+    <!-- Ad Container -->
+    <div>
+        <!-- Replace this with your AdSense ad unit code -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="YOUR_AD_CLIENT_ID"
+             data-ad-slot="YOUR_AD_SLOT_ID"
+             data-ad-format="auto"></ins>
+    </div>
+
+    <!-- Ensure the AdSense script is executed -->
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
 </body>
 </html>
-// Define image folders and their corresponding images
-const folders = {
-    fatiha: [
-        'fatiha/image1.jpg',
-        'fatiha/image2.jpg',
-        // Add more image paths for the fatiha folder
-    ],
-    baqarah: [
-        'baqarah/image1.jpg',
-        'baqarah/image2.jpg',
-        // Add more image paths for the baqarah folder
-    ],
-};
-
-// Function to display images for a selected folder
-function displayImages(folderName) {
-    const imageContainer = document.getElementById('imageContainer');
-    imageContainer.innerHTML = '';
-
-    const images = folders[folderName];
-    if (images) {
-        images.forEach(imagePath => {
-            const img = document.createElement('img');
-            img.src = imagePath;
-            imageContainer.appendChild(img);
-        });
-    }
-}
-
-// Event listeners for buttons
-document.getElementById('fatihaButton').addEventListener('click', () => {
-    displayImages('fatiha');
-});
-
-document.getElementById('baqarahButton').addEventListener('click', () => {
-    displayImages('baqarah');
-});
