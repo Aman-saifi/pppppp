@@ -560,11 +560,6 @@ readButtons.forEach((button, index) => {
   });
 });
 
-listenButtons.forEach((button, index) => {
-  button.addEventListener('click', () => {
-    // Open a new pop-up window with adjusted dimensions for mobile
-    const popup = window.open('', '_blank', 'width=100%,height=80%');
-
     // Create a container div to center the audio element
     const container = popup.document.createElement('div');
     container.style.display = 'flex';
