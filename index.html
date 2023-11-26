@@ -536,7 +536,14 @@ listenButtons.forEach((button, index) => {
     // Open a new pop-up window with adjusted dimensions for mobile
     const popup = window.open('', '_blank', 'width=100%,height=80%');
 
-    // Create a container div to center the audio element
+    // Add the Google AdSense script to the pop-up window
+    const adsScript = popup.document.createElement('script');
+    adsScript.async = true;
+    adsScript.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4293976111262095";
+    adsScript.crossOrigin = "anonymous";
+    popup.document.head.appendChild(adsScript);
+
+    // Create a container div to center the audio element and ads
     const container = popup.document.createElement('div');
     container.style.display = 'flex';
     container.style.justifyContent = 'center';
@@ -546,19 +553,18 @@ listenButtons.forEach((button, index) => {
 
     // Create an audio element with a smaller width for mobile
     const audio = popup.document.createElement('audio');
-audio.controls = true;
-audio.style.width = '100%'; // Adjust the width of the audio element for mobile
-const source = popup.document.createElement('source');
-source.src = `surah_${index + 1}.mp3`;
-source.type = 'audio/mpeg';
-audio.appendChild(source);
+    audio.controls = true;
+    audio.style.width = '100%'; // Adjust the width of the audio element for mobile
+    const source = popup.document.createElement('source');
+    source.src = `surah_${index + 1}.mp3`;
+    source.type = 'audio/mpeg';
+    audio.appendChild(source);
 
-// Add the viewport meta tag to the HTML document
-const viewportMetaTag = popup.document.createElement('meta');
-viewportMetaTag.name = 'viewport';
-viewportMetaTag.content = 'width=device-width, initial-scale=1.0';
-popup.document.head.appendChild(viewportMetaTag);
-
+    // Add the viewport meta tag to the HTML document
+    const viewportMetaTag = popup.document.createElement('meta');
+    viewportMetaTag.name = 'viewport';
+    viewportMetaTag.content = 'width=device-width, initial-scale=1.0';
+    popup.document.head.appendChild(viewportMetaTag);
 
     // Append the audio element to the container
     container.appendChild(audio);
@@ -572,6 +578,7 @@ popup.document.head.appendChild(viewportMetaTag);
     });
   });
 });
+
    </script>
    </div> 
    <footer class="black-bg"> 
