@@ -548,7 +548,6 @@ listenButtons.forEach((button, index) => {
     const audio = popup.document.createElement('audio');
     audio.controls = true;
     audio.style.width = '35%'; // Adjust the width of the audio element for mobile
-   audio.style.height = '50%';
     const source = popup.document.createElement('source');
     source.src = `surah_${index + 1}.mp3`;
     source.type = 'audio/mpeg';
