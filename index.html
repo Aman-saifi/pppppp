@@ -546,12 +546,19 @@ listenButtons.forEach((button, index) => {
 
     // Create an audio element with a smaller width for mobile
     const audio = popup.document.createElement('audio');
-    audio.controls = true;
-    audio.style.width = '35%'; // Adjust the width of the audio element for mobile
-    const source = popup.document.createElement('source');
-    source.src = `surah_${index + 1}.mp3`;
-    source.type = 'audio/mpeg';
-    audio.appendChild(source);
+audio.controls = true;
+audio.style.width = '100%'; // Adjust the width of the audio element for mobile
+const source = popup.document.createElement('source');
+source.src = `surah_${index + 1}.mp3`;
+source.type = 'audio/mpeg';
+audio.appendChild(source);
+
+// Add the viewport meta tag to the HTML document
+const viewportMetaTag = popup.document.createElement('meta');
+viewportMetaTag.name = 'viewport';
+viewportMetaTag.content = 'width=device-width, initial-scale=1.0';
+popup.document.head.appendChild(viewportMetaTag);
+
 
     // Append the audio element to the container
     container.appendChild(audio);
