@@ -1,142 +1,138 @@
-<!doctype html> 
- <html> 
- <head> 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans">
-  <link rel="shortcut icon" type="image/png" href="https://drive.google.com/uc?id=1NshdNhIcu2TgGTuJZQ5wOj4A-kT0i-B0">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), interest-cohort=()">
-  <title>Quran Kareem</title> 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> 
-  <meta charset="UTF-8"> 
+  <title>Quran Kareem</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap">
+  <link rel="icon" type="image/png" href="https://drive.google.com/uc?id=1NshdNhIcu2TgGTuJZQ5wOj4A-kT0i-B0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4293976111262095" crossorigin="anonymous"></script>
-  <style>
+<style>
 
-   * {
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-    body {
-    font-family: ' Open Sans', Arial, sans-serif;
+  }
+
+  body {
+    font-family: 'Open Sans', Arial, sans-serif; /* Fix the font-family property */
     margin: 0;
     padding: 0;
     background-color: #ffffff;
-    color: rgb(0, 0, 0);
-}
-
-
- 
-   h1 {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0%;
-  background-color: #17a2b8;
-  color: rgb(255, 255, 255);
-  padding: 10px;
-  font-size: 30px;
-  word-spacing: 10px;
-  text-align: center;
+    color: #000000; /* Use hex code or color name for better consistency */
   }
-      
-      .search {
-  width: 100%;
-  position: sticky;
-  top: 55px;
-  z-index: 1;
-  background-color: #000000; /* Add a background color */
-  padding: 5px 0; /* Add padding for spacing */
-  background-radius: 5px 0 0 5px;
+
+  h1 {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: #17a2b8;
+    color: #ffffff;
+    padding: 10px;
+    font-size: 30px;
+    word-spacing: 10px;
+    text-align: center;
+  }
+
+  .search {
+    width: 100%;
+    position: sticky;
+    top: 55px;
+    z-index: 1;
+    background-color: #000000;
+    padding: 5px 0;
+    border-radius: 5px 0 0 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  display: flex;
-}
+    display: flex;
+  }
 
-.searchTerm {
-  width: 100%;
-  border: 2px solid #00B4CC;
-  border-right: none;
-  padding: 5px;
-  height: 34px;
-  border-radius: 5px 0 0 5px;
-  outline: none;
-  color: #00B4CC;
-}
+  .searchTerm {
+    width: 100%;
+    border: 2px solid #00B4CC;
+    border-right: none;
+    padding: 5px;
+    height: 34px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #00B4CC;
+  }
 
-.searchTerm:focus{
-  color: #000000;
-}
+  .searchTerm:focus {
+    color: #000000;
+  }
 
-.searchButton {
-  width: 40px;
-  height: 34px;
-  border: 1px solid #00B4CC;
-  background: #00B4CC;
-  text-align: center;
-  color: #FFF;
-  border-radius: 0 5px 5px 0;
-  cursor: pointer;
-  font-size: 20px;
-}
+  .searchButton {
+    width: 40px;
+    height: 34px;
+    border: 1px solid #00B4CC;
+    background: #00B4CC;
+    text-align: center;
+    color: #FFF;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+  }
 
-   ul {
-      list-style: none;
-      padding: 0;
-      
-    }
+  ul {
+    list-style: none;
+    padding: 0;
+  }
 
-    li {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 10px;
-      margin: 7px 0;
-      background-color: #ffffff;
-      border-color: #000000;
-      border-radius: 0px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0 );
-    }
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 7px 0;
+    background-color: #ffffff;
+    border-color: #000000;
+    border-radius: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0);
+  }
 
-    .button-group {
-      display: flex;
-      align-items: center;
-      margin-left: 10px;
-    }
+  .button-group {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+  }
 
-    .read-btn {
-      padding: 10px 20px;
-      font-size: 14px;
-      background-color: #17a2b8;
-      color: #ffffff;
-      border: 1px;
-      border-radius: 3px;
-      cursor: pointer;
-      margin-right: 30px;
-     text-decoration: none;
-    }
+  .read-btn,
+  .listen-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 3px;
+    cursor: pointer;
+    text-decoration: none; /* Add text-decoration to remove underlines on buttons */
+  }
 
-    .listen-btn {
-      padding: 10px 20px;
-      font-size: 14px;
-      background-color: #28a745;
-      color: #ffffff;
-      border: none;
-      border-radius: 3px;
-      cursor: pointer;
-    }
+  .read-btn {
+    background-color: #17a2b8;
+    color: #ffffff;
+    margin-right: 30px;
+  }
 
-    .pdf-container, .audio-container {
-      margin-top: 20px;
-      text-align: center;
-    }
+  .listen-btn {
+    background-color: #28a745;
+    color: #ffffff;
+    border: none;
+  }
 
-    footer {
+  .pdf-container,
+  .audio-container {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  footer {
     background-color: #28a745;
     color: #ffffff;
     text-align: center;
     padding: 10px 0;
   }
 
-  
-  </style> 
+</style>
  </head> 
  <body>
   <h1>15linequran.com</h1>
@@ -495,7 +491,7 @@
     <li> <span>114. An-Naas</span> 
      <div class="button-group"> <a href=https://drive.google.com/file/d/1cc25_Xr2gCyM_5EadZAQMQj3D5LwfZcu/view?usp=sharing class="read-btn">Read</a> <button class="listen-btn">Listen</button> <!-- Repeat for all 114 Surahs --> 
      </div></li></ul>
-    
+
    <div class="pdf-container"> <!-- PDF content for each surah will be displayed here --> 
    </div> 
    <div class="audio-container"> <!-- Audio content for each surah will be played here -->
@@ -503,9 +499,8 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4293976111262095"
      crossorigin="anonymous"></script>
     
-    <script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-    
+     <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
      
      // Get the search input element and the list of surahs
   const searchTermInput = document.querySelector('.searchTerm');
@@ -584,13 +579,20 @@ listenButtons.forEach((button, index) => {
 
    </script>
    </div> 
-   <footer class="black-bg"> 
-    <div class="footer-details"> 
-     <p style="margin: 30px auto; width: 75%;"> 15linequran.com</p> 
-     <p style="margin: 30px 0;">Owner: AMAN SAIFI</p> <p style="margin: 30px 0;">Email : mramansaifi78602@gmail.com</p> <a href="https://www.instagram.com/abdullahsays.in/" target="_blank"> <img src="https://imgur.com/a/AgDGT5L.jpg" alt="Instagram" width="30" height="30" style="margin: 30px;"></a> <a href="https://youtube.com/@AMANSAIFIOFFICIAL?si=ZekPwLN_h6rex-ky"> <img src="https://imgur.com/a/O5DnrTl.jpg" alt="YouTube" width="30" height="30" style="margin: 30px;" ></a>  
-     <p style="margin: 30px auto; width: 50%;" width: 50%;"> All rights reserved. ©15linequran.com&nbsp;</p> 
-    </div> 
-   </footer> 
+   <footer class="black-bg">
+    <div class="footer-details">
+      <p style="margin: 30px auto; width: 75%;">15linequran.com</p>
+      <p style="margin: 30px 0;">Owner: AMAN SAIFI</p>
+      <p style="margin: 30px 0;">Email: mramansaifi78602@gmail.com</p>
+      <a href="https://www.instagram.com/abdullahsays.in/" target="_blank">
+        <img src="https://i.imgur.com/K6trBVzs.jpg" alt="Instagram" width="30" height="30" style="margin: 30px;">
+      </a>
+      <a href="https://youtube.com/@AMANSAIFIOFFICIAL?si=ZekPwLN_h6rex-ky">
+        <img src="https://i.imgur.com/3jlHkPM.jpg" alt="YouTube" width="30" height="30" style="margin: 30px;">
+      </a>
+      <p style="margin: 30px auto; width: 50%;">All rights reserved. ©15linequran.com</p>
+    </div>
+  </footer>
 
   </div> 
  </body>
