@@ -550,12 +550,7 @@ listenButtons.forEach((button, index) => {
     // Open a new pop-up window with adjusted dimensions for mobile
     const popup = window.open('', '_blank', 'width=100%,height=80%');
 
-    // Add the Google AdSense script to the pop-up window
-    const adsScript = popup.document.createElement('script');
-    adsScript.async = true;
-    adsScript.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4293976111262095";
-    adsScript.crossOrigin = "anonymous";
-    popup.document.head.appendChild(adsScript);
+    
 
     // Create a container div to center the audio element and ads
     const container = popup.document.createElement('div');
